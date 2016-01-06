@@ -1,0 +1,567 @@
+/*body{
+	background: #F9F9F9;
+}
+.hed{
+	background: #FFFFFF;
+	width: 100%;
+	height: auto;
+	margin-bottom: -20px;
+}
+.headerbar{
+	background: #FFFFFF;
+}
+.header-bar{
+	background: #FFFFFF;
+	color: #000000;
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.body-large{
+	background: #F9F9F9;
+	color: #7D7D7D;
+           width: 100%;
+           height: auto;
+           border-top: 1px #7D7D7D solid ;
+}
+.ask-text{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: small;
+	color: #7D7D7D;
+}
+.ask-text-login{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: small;
+	color: #6FDA44;
+	margin-left: 50px;
+}
+
+.ask-text-one{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: small;
+	color: #7D7D7D;
+    cursor: pointer;
+}
+.ask-text-login-one{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: small;
+	color: #6FDA44;
+	margin-left: 50px;
+    cursor: pointer;
+}
+.ask-text-login-profile{
+    font-family: 'Open Sans Condensed', sans-serif;
+	font-size: small;
+	color: #6FDA44;
+	margin-left: 50px;
+    cursor: pointer;
+}
+
+.ask-text-one:hover{
+   font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: #6FDA44;
+	text-decoration-style: wavy;
+
+}
+.ask-text-login-one:hover{
+
+     font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color:  #7D7D7D;
+	text-decoration-style: wavy;
+}
+
+.ask-text-login-profile:hover{
+
+     font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color:  #7D7D7D;
+	text-decoration-style: wavy;
+}
+
+.bodylargetext{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:30px;
+	color: #7D7D7D;
+}
+.Destiny{
+	text-align: center;
+	margin-top: 30px;
+}
+.Destiny2{
+	text-align: center;
+	    margin-left: 40%;
+
+}
+.blocksome{
+	margin-top: 40px;
+	margin-left: 30%;
+}
+.texthire{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:30px;
+	color: #7D7D7D;
+	margin-left: 10%;
+}
+.dtext{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:small;
+	color: #000;
+	margin-left: 30%;
+}
+.tango{
+      background: #6FDA44;
+    width: 100px;
+    height: 30px;
+    color: white;
+    padding-left: 40px;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-left: 27%;
+}
+.tango:hover{
+	 background: #008329;
+}
+.or{
+	margin-top: 100px;
+}
+.footer-large{
+	background: #494949;
+	width: 100%;
+	height: 80px;
+	color: white;
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+}
+ #myOverlay1 {
+                width:600px;
+                height:400px;
+            }
+  #myOverlay4 {
+                width:600px;
+                height:400px;
+            }
+            #myOverlay2 {
+                width:50%;
+                height:25%;
+                	font-family: 'Open Sans Condensed', sans-serif;
+                margin-left: 30%;
+            }
+            #myOverlay3 {
+
+            }
+.github{
+background: #2B2B2B;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 150px;
+    height: 40px;
+    padding-left: 30px;
+padding-top: 10px;
+    margin-left: 0px;
+    cursor: pointer;
+
+}
+.github:hover{
+    background: white;
+   color: #7D7D7D;
+    border: 0.5px solid #7D7D7D;
+
+}
+.popupcontent{
+     margin-left: 30px;
+}
+.menutitlebar{
+background: #494949;
+    height: auto;
+    color: white;
+     font-family: 'Open Sans Condensed', sans-serif;
+}
+.menuitem{
+   cursor: pointer;
+}
+.ltext-one{
+   height: auto;
+    color:  #494949;
+     font-family: 'Open Sans Condensed', sans-serif;
+}
+.profile{
+
+}
+.titleprofile{
+    font-size: 40px;
+}
+.textyprofile{
+    font-size: 15px;
+}
+.btntexty{
+    background: #6FDA44;
+    height: 40px;
+    width: 100px;
+    color: white;
+     font-family: 'Open Sans Condensed', sans-serif;
+     text-align: center;
+}
+.textylarge{
+   margin-left: 25%;
+}
+.tutslarge{
+      font-family: 'Open Sans Condensed', sans-serif;
+      color:  #494949;
+
+}
+.helptexttuts{
+  border-top: 0.5px solid  #494949;
+    margin-top: 10px;
+     margin-bottom: 10px;
+    font-size: 20px;
+}
+.tutssmall{
+    margin-top: 20px;
+      font-family: 'Open Sans Condensed', sans-serif;
+    background: #fff;
+    height: 150px;
+    margin-bottom: 20px;
+
+}
+.circular {
+	width: 75px;
+	height: 66%;
+	border-radius: 37.5px;
+	-webkit-border-radius: 37.5px;
+	-moz-border-radius: 37.5px;
+	background: url(../img/index.jpeg) no-repeat;
+	}
+.name{
+  position: absolute;
+left: 22%;
+bottom: 27%;
+}
+.profilebtn{
+color:  #6FDA44;
+cursor: pointer;
+}
+.profilebtn:hover{
+    font-size:15px;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+.separator{
+    color: #F9F9F9;
+}
+.footerhome{
+background: #494949;
+       font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    height: 75px;
+    margin-top: 10px;
+}
+.wst{
+      font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40px;
+    color: #494949;
+    margin-left: 30%;
+
+}
+.diff{
+    font-weight:100;
+    margin-left: 30%;
+}
+input[type=checkbox] {
+display:none;
+}
+
+input[type=checkbox] + label
+{
+background: url("") no-repeat;
+background-size: 50%;
+height: 150px;
+width: 250px;
+display:inline-block;
+padding: 0 0 0 0px;
+}
+input[type=checkbox]:checked + label
+{
+background: url("") no-repeat;
+background-size: 50%;
+height: 150px;
+width: 250px;
+display:inline-block;
+padding: 0 0 0 0px;
+}
+
+.html5:hover{
+    border: 0.1px solid #6FDA44;
+}
+.html5{
+  background: url(../img/language-html5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.js:hover{
+    border: 0.1px solid #6FDA44;
+}
+
+.js{
+  background: url(../img/language-javascript.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.android:hover{
+    border: 0.1px solid #6FDA44;
+}
+.android{
+  background: url(../img/android.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ios:hover{
+    border: 0.1px solid #6FDA44;
+}
+.ios{
+  background: url(../img/apple-ios.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.php:hover{
+    border: 0.1px solid #6FDA44;
+}
+.php{
+  background: url(../img/language-php.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.python:hover{
+    border: 0.1px solid #6FDA44;
+}
+.python{
+  background: url(../img/language-python.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.linux:hover{
+    border: 0.1px solid #6FDA44;
+}
+.linux{
+  background: url(../img/linux.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.chash:hover{
+    border: 0.1px solid #6FDA44;
+}
+.chash{
+  background: url(../img/language-csharp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.btnprofile{
+    height: 40px;
+    background: #6FDA44;
+      font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+
+}
+.btnprofilelarge{
+   padding-left: 30%;
+    cursor: pointer;
+}
+.btnprofile:hover{
+    background: #008329;
+}
+.bpl{
+  margin-left: 15%;
+}
+.emp{
+
+  height: auto;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+
+
+}
+.emp-tab {
+  height: auto;
+  background: #FFFFFF;
+    color: #494949;
+      border: 0.5px solid #494949;
+
+}
+.empgreen{
+  color: #6FDA44;
+  cursor: pointer;
+}
+.empgrey{
+    color: #494949;
+     font-family: 'Open Sans Condensed', sans-serif;
+}
+.empgreen:hover{
+  text-decoration: underline;
+}
+.empborder{
+  border-bottom: 1px solid #494949;
+
+}
+.empred{
+    color:red;
+}
+.empred:hover{
+  text-decoration: underline;
+}
+.dashlinks{
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-left:30px;
+  position:absolute;
+  margin-top:10px;
+ padding-top: 40px;
+
+}
+.tdash{
+     color: #494949;
+	  font-family: 'Open Sans Condensed', sans-serif;
+	  font-size:26px;
+}
+.circles {
+	width: 16.66667%;
+     height:16.66667%;
+border-radius: 64%;
+	-webkit-border-radius: 37.5px;
+	-moz-border-radius: 37.5px;
+	background: url(../img/index.jpeg) no-repeat;
+    margin-top: 20px;
+	}
+.ditems{
+       font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+}
+.dsubject{
+      font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+}
+.dloc{
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 15px;
+}
+.overview{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.porttop{
+  font-family: 'Open Sans Condensed', sans-serif;
+    color: #494949;
+	text-align:center;
+	background:#AFAFAF;
+	width: 109.5%;
+margin-left: -12px;
+background-image:url(../img/Capture.PNG);
+background-repeat:no-repeat;
+}
+.portborder{
+border:1px solid #494949;
+height:230px;
+    margin-right: 20px;
+
+}
+.porpic{
+
+width: 109.5%;
+margin-left: -12px;
+height:205px;
+}
+#searchkey{
+border: 2px solid rgb(73, 73, 73);
+width: 40%;
+color: rgb(73, 73, 73);
+height:30px;
+}
+#searchkey:hover{
+border: 2px solid #37A000;
+}
+#searchkey:focus{
+border: 2px solid #37A000;
+}
+.workbody{
+margin-top:60px;
+}
+.searchbar{
+text-align:center;
+}
+
+#btnsearch{
+height: 40px;
+width: 100px;
+background: rgb(55, 160, 0) none repeat scroll 0% 0%;
+border: medium none;
+color:#494949;
+ font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.rec{
+border:1px solid  #494949;
+ font-family: 'Open Sans Condensed', sans-serif;
+ background:#FFF;
+ }
+ .jobtitle{
+ color: #37A000;
+ font-weight:bold;
+  text-align: center;
+ }
+ .jobpay{
+ margin-top:10px;
+ color: #494949;
+  text-align: center;
+ }
+ .atitle{
+
+ font-weight:bold;
+ margin-left:10px;
+ }
+ .jobdesc{
+ margin-top:10px;
+ font-weight:300;
+  text-align: center;
+ }
+ .jobdetails{
+ margin-top:20px;
+  text-align: center;
+
+ }
+ .shaded{
+ background:#9F9B9B;
+ color:#494949;
+ height:20px;
+ width:40px;
+ border-radius: 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	cursor:pointer;
+ }
+ .shaded:hover{
+ background:#37A000;
+ }
+ .btnapply{
+ background:#37A000;
+ height:40px;
+ text-align: center;
+margin-left: 25%;
+padding-top: 5px;
+margin-top: 20px;
+margin-bottom: 10px;
+color:#494949;
+cursor:pointer;
+ }
+ .job{
+ border-bottom:1px solid black;*/

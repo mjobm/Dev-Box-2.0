@@ -1,0 +1,70 @@
+{% extends 'Layout.html' %}
+{% load static from staticfiles %}
+{% block content %}
+<br>
+<div class="row">
+        <div class="large-12 medium-12 small-12 columns">
+            <div class="row divider">
+              {% for item in developer %}
+              <div class="card-css">
+               <img src="{% static 'img/devbox-logo.png' %}">
+              <div class="card-divider">
+                <br>
+                {{ item.first_name}} {{item.last_name}}
+              </div>
+              <div class="card-section">
+                <h4>{{ item.software_title }}</h4>
+                <p>{{ item.bio }}</p>
+              </div>
+            </div>
+                  <!-- <div class="large-4 columns medium-4 columns small-4 columns">
+                    <h4>My Profile</h4><br>
+                    <img src="{% static 'img/devbox-logo.png' %}">
+                  </div>
+                  <div class="large-8 medium-8 small-8 columns prof">
+                    <ul>
+                        <li>{{ item.first_name}} {{item.last_name}}</li>
+                        <li>{{ item.software_title }}</li>
+                    </ul>
+                  </div>
+
+                  <div class="row divider">
+                      <div class="large-12 medium-12 small-12 columns profile-bio">
+                          <p>{{item.bio}}</p>
+                      </div>
+                  </div> -->
+
+              {% endfor %}
+            </div>
+
+
+            {% if portfolio %}
+            <div class="row profiles">
+
+              {% for data in portfolio %}
+
+                  <div class="large-4 medium-4 small-4 columns">
+                    <h3>Portfolios</h3>
+                      <div class="card-css">
+                          <div class="project-title">
+                              <h5>{{ data.title }}</h5>
+                          </div>
+                          <div class="project-image">
+                              <img src="/media/{{ data.image }}" alt="{{ data.image }}">
+                          </div>
+                          <div class="project-description">
+                              <p>{{ data.description }}</p>
+                          </div>
+                      </div>
+                  </div>
+
+              {% endfor %}
+
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}

@@ -1,0 +1,323 @@
+
+/*.spaced{
+    margin: 2%;
+}
+.reset_btn{
+    margin-left: 1%;
+}
+header{
+    border-bottom: 12px;
+}
+header.nav{
+    background:#000;
+    color: #C0C0C0;
+    height: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 1;
+}
+.link{
+    font-size: 32px;
+    color: green;
+}
+.page-content{
+    display: block;
+    text-align: center;
+}
+.demo-icon{
+    height: 50px;
+    width: 50px;
+    margin-top: 0;
+    margin-bottom: 15%;
+}
+.demo-avatar{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+#accbtn{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20%;
+}
+
+.menu{
+  z-index: 100;
+}
+.reg{
+    display: block;
+}*/
+.avatar{
+  position: relative;
+  margin-top: 12%;
+  margin-left: 1%;
+  width: 60px;
+  height: 60px;
+
+}
+
+.logo{
+  position: relative;
+  bottom: 4px;
+
+  width: 40px;
+  height: 40px;
+
+}
+.full{
+  min-width: 100%;
+}
+.navbar .brand {
+max-height: 40px;
+overflow: visible;
+padding-top: 0;
+padding-bottom: 0;
+}
+.navbar a.navbar-brand {padding: 9px 15px 8px; }
+.card-css {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+  padding: 4% 4%;
+}
+
+
+//bills CSS
+body{
+    height: 100%;
+    background: #e5e5e5;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+ul{
+    list-style: none;
+}
+span{
+    color: aliceblue;
+    font-size: 1.5em;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+   /* border-bottom: 1px solid #000;*/
+}
+section#intro{
+    padding-top: 50px;
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1443770760695-e1bfa3e62229?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=d5def01e7dc42f071b0b2c8c90561a5b);
+    /*filter: brightness(40%);
+    -webkit-filter: brightness(40%);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+header ul{
+    list-style: none;
+    margin-top: 40px;
+}
+header ul li{
+    font-size: 1.13em;
+    display: inline-block;
+    margin: 10px;
+    color: aliceblue;
+}
+header  ul li a{
+    color: green;
+    text-decoration: none;
+}
+footer{
+    height: auto;
+    text-align: center;
+    color: white;
+    background: #263238;
+    margin-bottom: 0;
+}
+/*look back at it*/
+/*header ul>li:nth-child(1){
+    color: #fff;
+
+}
+header ul >li:nth-child(2){
+
+}*/
+header img{
+    margin-top:10%;
+}
+
+
+/*---------------------------------------------/
+                    CLASSES STYLES
+/--------------------------------------------*/
+
+section.first {
+    text-align: center;
+	background: #fff;
+
+}
+.row.hero {
+    font-size: 1.3em;
+	padding-top: 12%;
+    padding-bottom: 21.5%;
+}
+.row.hero b {
+    color:green !important;
+}
+/*.row.hero ,#txt p{
+    color: aliceblue;
+    font-size: 1.5em;
+}*/
+.row.works {
+	padding: 10% 0;
+    padding-top: 5%;
+}
+.row.works span{
+    color: #000;
+}
+.row.works p{
+    font-size: 1.3em;
+}
+.row.foot{
+    padding: 3% 0;
+    font-weight: 100;
+
+}
+.btn.mdm {
+    border: 1px solid green;
+    border-radius: 3px;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 10%;
+    padding: .8% 5%;
+    background: green;
+    transition: all .4s ease;
+
+}
+
+.btn.mdm.create{
+    margin-left: 50px;
+    margin-left: 40%;
+}
+.btn.mdm.sqr{
+    border-radius: 0px;
+
+}
+.btn.mdm.sec{
+    margin-top: 5%;
+}
+
+.btn.mdm:hover{
+    background: #fff;
+    border-color: #000;
+    color: #000;
+
+}
+.first ul{
+    list-style: none;
+}
+.first ul li{
+    padding: 0 30px;
+    display: inline-block;
+    margin:5% 6%;
+}
+ul.info {
+	list-style: none;
+}
+.info li{
+    padding: 1% 0;
+}
+ul.connect{
+    list-style: none;
+}
+.connect li{
+    padding: 1% 0;
+}
+ul.social{
+    list-style: none;
+}
+.social li{
+
+    display: inline-block;
+    padding: 0.5% 2%;
+}
+.port {
+	text-align: center;
+
+    padding: 50px;
+    margin: 5px 0px;
+
+}
+.port ul{
+    list-style: none;
+    margin: 20px;
+}
+.btn.view {
+    border: 1px solid grey;
+	padding: 15px ;
+    color: green;
+}
+.bio {
+	margin-bottom: 30px;
+}
+
+.post {
+    padding-top: 10px;
+	height: 50px;
+    background: #263238 ;
+}
+.post a:hover{
+
+}
+a.btn.postjob {
+
+	color: #fff;
+}
+a.btn.postjob:hover{
+    color: greenyellow;
+}
+.reg{
+    text-align: center;
+}
+/*******DEVELOPER BIO STATUS AREA************/
+.profile-bio{
+    padding: 30px;
+}
+.prof{
+    padding: 20px;
+}
+.card{
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid grey;
+}
+.project-title{
+    padding: 5px;
+    border-bottom: 1px solid grey;
+}
+.project-image{
+    padding: 7px;
+}
+.project-description{
+    padding: 5px;
+}
+.divider{
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+.profiles{
+    padding-top: 5px;
+}
+/*---------------------------------------------/
+                    ID STYLES
+/--------------------------------------------*/
+#intro p {
+    display: block;
+    font-size: 2em;
+    padding-top: 2%;
+}

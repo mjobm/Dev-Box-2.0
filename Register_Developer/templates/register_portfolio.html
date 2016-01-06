@@ -1,0 +1,13 @@
+{% extends 'Layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<br>
+  <div class="row">
+    <div class="large-12 small-12 columns">
+          {% csrf_token %}
+          {% crispy portfolio_form %}
+      </div>
+    </div>
+{% endblock %}

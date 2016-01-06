@@ -1,0 +1,42 @@
+{% extends 'Layout.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<section id="intro">
+          <div class="row hero">
+            <div class="large-12 small-12 medium-12  columns">
+                <p id="txt"><span class="green">We connect developers and employers.</span></p><!--<br>Search for developers and build your company! We give them to you</span> <br>based on merit.</p>-->
+               <!-- <p id="txt">Browse portfolios and job seekers</p>-->
+                <!--<a class="btn mdm sec" href="#">Get started</a>-->
+                    <div class="large-12">
+                        <a class="btn mdm sec" href="/start/">Get started</a>
+                    </div>
+              </div>
+          </div>
+          </section>
+          <section class="first">
+              <div class="row works">
+                  <div class="large-12 small-12 medium-12 columns">
+
+                <h2>How it works</h2>
+                      <p>Get the people you need fast.</p>
+                      <div class="row">
+                        <div class="large-4 columns">
+                            <span>Search</span><br><img src="{% static 'img/analys64.png' %}"/><br>
+                            <p>Search for developers. </p>
+                        </div>
+                        <div class="large-4 columns">
+                          <span>Connect</span><br><img src="{% static 'img/stick%20man161-64.png' %}"/><br>
+                            <p>Connect with developers by viewing their profiles.</p>
+                        </div>
+                        <div class="large-4 columns">
+
+                          <span>Develop</span><br><img src="{% static 'img/develop64.png' %}"/><br>
+                            <p>Start developing your amazing products.</p>
+                        </div>
+                      </div>
+                      <a class="btn mdm sec" href="/start/">Get started</a>
+                    </div>
+          </div>
+          </section>
+{% endblock %}

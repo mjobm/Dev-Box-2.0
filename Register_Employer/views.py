@@ -4,54 +4,46 @@ from django.contrib.auth.decorators import login_required
 from Register_Employer.models import Employer
 from Register_Employer.forms import EmployerForm, JobForm
 from Register_Developer.models import Developer
+from shared_files.DevBoxUser import get_object_or_none
 # Create your views here.
 
 
 @login_required(login_url='/emp/accounts/login/')
 def emp_home(request):
-    # dev = None
-    # try:
-    #
-    # except:
-    #     pass
-    dev = get_object_or_404(Developer, id=request.user.id or None)
-    if not dev:
-        context = {'user': request.user}
+    if not get_object_or_none(Developer, id=request.user.id):
+        context = {'user': request.user, 'employer': ''}
         save_employer(request)
-        emp = Employer.objects.get(id=request.user.id)
-        if not emp.first_name:
-            employer_form = EmployerForm(instance=emp)
+        if not get_object_or_none(Employer, id=request.user.id).first_name:
+            employer_form = EmployerForm(instance=get_object_or_none(Employer,
+                                         id=request.user.id))
             return render(request, 'register_emp.html',
                           context={'user': request.user,
                                    'employer_form': employer_form})
+        employer = get_object_or_none(Employer, id=request.user.id)
+        context = {'user': request.user, 'employer': employer.user}
         return render(request, 'emp_home.html', context=context)
     return redirect('/dev/logout', '/emp/accounts/login/')
 
 
 @login_required(login_url='/emp/accounts/login/')
 def register_employer(request):
-    emp_details = Employer.objects.get(id=request.user.id)
+    emp_details = Employer.objects.get(pk=request.user.pk)
     employer_form = EmployerForm(request.POST or None, instance=emp_details)
     if request.method == 'POST':
         if employer_form.is_valid():
             employer_form.save()
             return redirect('/emp/home/')
-    return render(request, 'emp_home.html',
+    return render(request, 'register_emp.html',
                   context={'employer_form': employer_form})
 
 
 # this method checks whether an employer exists in the model,
 # if None exists then the Employers id, username & email are saved.
-@login_required(login_url='/emp/accounts/login/')
 def save_employer(request):
-    emp_id = None
-    try:
-        emp_id = Employer.objects.get(pk=request.user.pk)
-    except:
-        print('User does not exist')
-    emp = Employer()
-    if not emp_id:
+    if not get_object_or_none(Employer, pk=request.user.pk):
+        emp = Employer()
         emp.pk = request.user.pk
+        emp.user = request.user
         emp.user_name = request.user.username
         emp.email_address = request.user.email
         emp.is_employer = True

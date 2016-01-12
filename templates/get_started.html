@@ -1,23 +1,23 @@
-{% extends "Layout.html" %}
-{% block content %}
-<div class="cont-box">
+{% extends "Layout.html" %} {% block content %}
+<div class="height">
   <br>
   <br>
   <br>
   <br>
   <div class="row">
-     <div class="large-12 small-12 columns reg">
-         <div class="large-6 medium-6 small-6 columns">
-             <a href="/dev/profile/me" class="btn mdm sqr">Developer</a>
-         </div>
-
-         <div class="large-6 medium-6 small-6 columns">
-             <a href="/emp/home" class="btn mdm sqr">Employer</a>
-         </div>
-     </div>
-   </div>
-   <br>
-   <br>
-   <br>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-2">
+      <a href="/dev/home/" class="btn btn-default btn-lg">Developer</a>
+    </div>
+    <div class="col-md-2">
+      <a href="/emp/home/" class="btn btn-default btn-lg">Employer</a>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
 </div>
 {% endblock %}

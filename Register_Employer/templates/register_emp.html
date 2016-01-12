@@ -4,10 +4,9 @@
 {% block content %}
   <br>
   <br>
-  <div class="row">
-    <div class="large-12 small-12 columns reg">
-      {% csrf_token %}
-      {% crispy employer_form %}
-    </div>
-  </div>
+  <br>
+  <br>
+  {% csrf_token %}
+  {% crispy employer_form %}
+  <br>
 {% endblock %}

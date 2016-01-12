@@ -1,42 +1,100 @@
-{% extends 'Layout.html' %}
-{% load static from staticfiles %}
+{% extends 'Layout.html' %} {% load static from staticfiles %} {% block content %}
+<div class="wrapper">
+  <div class="parallax filter-gradient green" data-color="green">
 
-{% block content %}
-<section id="intro">
-          <div class="row hero">
-            <div class="large-12 small-12 medium-12  columns">
-                <p id="txt"><span class="green">We connect developers and employers.</span></p><!--<br>Search for developers and build your company! We give them to you</span> <br>based on merit.</p>-->
-               <!-- <p id="txt">Browse portfolios and job seekers</p>-->
-                <!--<a class="btn mdm sec" href="#">Get started</a>-->
-                    <div class="large-12">
-                        <a class="btn mdm sec" href="/start/">Get started</a>
-                    </div>
-              </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+
+          <div class="description">
+            <h2>WE CONNECT
+              <a href="/dev/home/">
+                <span class="btn btn-success square-md">DEVELOPERS</span>
+              </a> AND
+              <a href="/emp/home/">
+                <span class="btn btn-info square-md">EMPLOYERS</span>
+              </a>
+            </h2>
+            <br>
+            <h5></h5>
           </div>
-          </section>
-          <section class="first">
-              <div class="row works">
-                  <div class="large-12 small-12 medium-12 columns">
 
-                <h2>How it works</h2>
-                      <p>Get the people you need fast.</p>
-                      <div class="row">
-                        <div class="large-4 columns">
-                            <span>Search</span><br><img src="{% static 'img/analys64.png' %}"/><br>
-                            <p>Search for developers. </p>
-                        </div>
-                        <div class="large-4 columns">
-                          <span>Connect</span><br><img src="{% static 'img/stick%20man161-64.png' %}"/><br>
-                            <p>Connect with developers by viewing their profiles.</p>
-                        </div>
-                        <div class="large-4 columns">
 
-                          <span>Develop</span><br><img src="{% static 'img/develop64.png' %}"/><br>
-                            <p>Start developing your amazing products.</p>
-                        </div>
-                      </div>
-                      <a class="btn mdm sec" href="/start/">Get started</a>
-                    </div>
+          <div class="buttons">
+            <div class="begin">
+              <a href="/start/" class="btn btn-default square">BEGIN</a>
+            </div>
           </div>
-          </section>
-{% endblock %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section section-gray section-clients">
+    <div class="container text-center">
+      <h4 class="header-text">Patners</h4>
+      <div class="logos">
+        <ul class="list-unstyled">
+          <li>
+            <img src="{% static 'img/adobe.png' %}" />
+          </li>
+          <li>
+            <img src="{% static 'img/zendesk.png' %}" />
+          </li>
+          <li>
+            <img src="{% static 'img/ebay.png' %}" />
+            </i>
+            <li>
+              <img src="{% static 'img/evernote.png' %}" />
+            </li>
+            <li>
+              <img src="{% static 'img/airbnb.png' %}" />
+            </li>
+            <li>
+              <img src="{% static 'img/zappos.png' %}" />
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-features">
+    <div class="container">
+      <h4 class="header-text text-center">How It Works</h4>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blue">
+            <!--<div class="icon">
+              <i class="pe-7s-note2"></i>
+            </div>-->
+            <div class="text">
+              <h4>Online Customers Management</h4>
+              <p>All appointments sync with your Google calendar so your availability is always up to date. See your schedule at a glance from any device.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blue">
+            <div class="icon">
+              <i class="pe-7s-bell"></i>
+            </div>
+            <h4>Smart Notifications on hands</h4>
+            <p>Automatic text and email reminders make sure customers always remember their upcoming appointments.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blue">
+            <div class="icon">
+              <i class="pe-7s-graph1"></i>
+            </div>
+            <h4>Know your business better now</h4>
+            <p>Take payments and run your business on the go, in your store and then see how it all adds up with analytics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock %}

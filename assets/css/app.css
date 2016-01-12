@@ -1,102 +1,10 @@
-
-/*.spaced{
-    margin: 2%;
-}
-.reset_btn{
-    margin-left: 1%;
-}
-header{
-    border-bottom: 12px;
-}
-header.nav{
-    background:#000;
-    color: #C0C0C0;
-    height: 15%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    z-index: 1;
-}
-.link{
-    font-size: 32px;
-    color: green;
-}
-.page-content{
-    display: block;
-    text-align: center;
-}
-.demo-icon{
-    height: 50px;
-    width: 50px;
-    margin-top: 0;
-    margin-bottom: 15%;
-}
-.demo-avatar{
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-}
-#accbtn{
-    height: 60px;
-    width: 60px;
-    margin-bottom: 20%;
-}
-
-.menu{
-  z-index: 100;
-}
-.reg{
-    display: block;
-}*/
-.avatar{
-  position: relative;
-  margin-top: 12%;
-  margin-left: 1%;
-  width: 60px;
-  height: 60px;
-
-}
-
-.logo{
-  position: relative;
-  bottom: 4px;
-
-  width: 40px;
-  height: 40px;
-
-}
-.full{
-  min-width: 100%;
-}
-.navbar .brand {
-max-height: 40px;
-overflow: visible;
-padding-top: 0;
-padding-bottom: 0;
-}
-.navbar a.navbar-brand {padding: 9px 15px 8px; }
-.card-css {
-  position: relative;
-  float: left;
-  margin-right: 10px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  background: #fff;
-  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
-  box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
-  padding: 4% 4%;
-}
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500);
 
 
-//bills CSS
-body{
-    height: 100%;
-    background: #e5e5e5;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
 ul{
     list-style: none;
 }
+
 span{
     color: aliceblue;
     font-size: 1.5em;
@@ -107,7 +15,10 @@ header{
     background-color: transparent;
    /* border-bottom: 1px solid #000;*/
 }
-section#intro{
+/*section{
+    display: block;
+}*/
+#intro{
     padding-top: 50px;
     text-align: center;
     background-image: url(https://images.unsplash.com/photo-1443770760695-e1bfa3e62229?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=d5def01e7dc42f071b0b2c8c90561a5b);
@@ -128,13 +39,17 @@ header ul li{
     color: aliceblue;
 }
 header  ul li a{
-    color: green;
+    font-size: 25px;
+    color: #fff;
     text-decoration: none;
+}
+header ul li a:hover{
+    color: #64dd17;
 }
 footer{
     height: auto;
     text-align: center;
-    color: white;
+    color: #fff;
     background: #263238;
     margin-bottom: 0;
 }
@@ -155,12 +70,30 @@ header img{
                     CLASSES STYLES
 /--------------------------------------------*/
 
+.content-overlayed{
+    z-index: 9999;
+    height: 100vh;
+}
+.partners{
+    font-size: 2em;
+    padding: 3%;
+    text-align: center;
+    height:90px ;
+    background: #fff;
+    border-bottom: 1px solid grey;
+}
+.partners ul li{
+    display: inline-block;
+    padding: 0 5% ;
+
+}
 section.first {
     text-align: center;
 	background: #fff;
 
 }
 .row.hero {
+    text-align: center;
     font-size: 1.3em;
 	padding-top: 12%;
     padding-bottom: 21.5%;
@@ -183,11 +116,12 @@ section.first {
     font-size: 1.3em;
 }
 .row.foot{
+    font-size: 20px;
     padding: 3% 0;
     font-weight: 100;
 
 }
-.btn.mdm {
+/*.btn.mdm {
     border: 1px solid green;
     border-radius: 3px;
     font-size: 1.8em;
@@ -217,7 +151,7 @@ section.first {
     border-color: #000;
     color: #000;
 
-}
+}*/
 .first ul{
     list-style: none;
 }

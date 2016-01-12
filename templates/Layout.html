@@ -1,82 +1,74 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>DevBox</title>
+  <meta charset="UTF-8">
+  <title>DevBox</title>
 
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
-    <body>
-      {% if user.is_authenticated %}
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="{% static 'css/pen-icons.css' %}" rel="stylesheet" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
 
-      <header>
-        <div class="row">
-          <!--Image-->
-            <div class="large-2 medium-4 small-2 columns">
-              <img src="{% static 'img/devbox-logo.png' %}" height="50" width ="50" style="padding-top:12%">
-            </div>
-            <!--Links-->
-            <div class="large-4 medium-4 small-4 columns large-push-2">
-              <ul>
-                  <li><a href="/dev/logout/"><i class="fa fa-sign-out fa-1x"></i> &nbsp;Sign Out</a></li>
-              </ul>
-            </div>
+  <body class="landing-page landing-page1">
+
+    <!--navbar-->
+     {% if user.is_authenticated and developer %}
+
+       {% include "nav/_navbar_dev.html" %}
+
+     {% elif user.is_authenticated and employer %}
+
+       {% include "nav/_navbar_emp.html" %}
+
+     {% else %}
+
+       {% include "nav/_navbar_user.html" %}
+
+     {% endif %}
+     <!--navbar-->
+
+    {% block content %} {% endblock %}
+
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="pull-left">
+          <ul>
+
+            <li>
+              <a href="/">Home</a>
+            </li>
+
+          </ul>
+        </nav>
+        <div class="social-area pull-right">
+          <a class="btn btn-social btn-facebook btn-simple">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+          <a class="btn btn-social btn-twitter btn-simple">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="btn btn-social btn-pinterest btn-simple">
+            <i class="fa fa-pinterest"></i>
+          </a>
         </div>
-      </header>
-
-      {% else %}
-
-      {% include "nav/_nav-bar.html" %}
-
-      {% endif %}
-
-    {% block content %}
-
-
-    {% endblock %}
-
-    <footer >
-      <div class="row foot">
-        <div class="large-12">
-          <div class="large-6 medium-6 small-6 columns">
-            <h4 style="color:#fff">COMPANY INFO</h4>
-              <ul class="info">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Terms of service</a></li>
-                <li><a href="#">Privacy and Policy</a></li>
-              </ul>
-              </div>
-              <div class="large-6 medium-6 small-6 columns">
-                <h4 style="color:#fff">CONNECT WITH US</h4>
-                  <ul class="connect">
-                    <li><a href="#">Contact support</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">FAQ</a></li>
-                  </ul>
-                </div>
-                <div class="large-12 columns">
-                  <h4 style="color:#fff">SOCIAL REACH</h4>
-                  <ul class="social">
-                    <li><a href="#"><img src="{% static 'img/social/googleplus.png' %}"/></a></li>
-                    <li><a href="#"><img src="{% static 'img/social/facebook.png' %}"/></a></li>
-                    <li><a href="#"><img src="{% static 'img/social/twitter.png' %}"/></a></li>
-                  </ul>
-                </div>
-              </div>
-          </div>
-        </footer>
+        <div class="copyright">
+          &copy; 2015 <a href="/">DEVBOX</a>, home of engineers
+        </div>
       </div>
+    </footer>
 
-    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'bower_components/foundation/js/foundation.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'ckeditor/ckeditor.js' %}"></script>
     <script type="text/javascript" src="{% static 'ckeditor/adapters/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
   </body>
 </html>

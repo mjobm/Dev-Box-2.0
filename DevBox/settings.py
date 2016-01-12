@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 import dj_database_url
 DATABASES = {}
-DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] = dj_database_url.config()
 DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
@@ -63,19 +63,21 @@ INSTALLED_APPS = (
     'Register_Employer',
     'social.apps.django_app.default',
     'crispy_forms',
-    'crispy_forms_foundation',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'ckeditor',
 )
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = ('uni_form', 'foundation-5')
-CRISPY_TEMPLATE_PACK = 'foundation-5'
+AUTH_PROFILE_MODULE = 'Register_Developer.Developer'
+
+# CRISPY_ALLOWED_TEMPLATE_PACKS = ('uni_form', 'foundation-5')
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 AUTHENTICATION_BACKENDS = (
-     'social.backends.github.GithubOAuth2',
-     'django.contrib.auth.backends.ModelBackend',
-     'allauth.account.auth_backends.AuthenticationBackend',
+    'social.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 )
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -124,8 +126,7 @@ ROOT_URLCONF = 'DevBox.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -189,6 +190,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/media/'

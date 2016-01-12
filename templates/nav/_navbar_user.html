@@ -1,0 +1,40 @@
+{% load static from staticfiles %}
+<nav class="navbar navbar-inverse navbar-top" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'img/devbox-logo.png' %}" class="img-responsive logo" alt="">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Jobs</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/emp/home/" class="btn btn-success">
+            <span style="font-size:18px;">employer <i class="fa fa-sign-in"></span></i></a>
+        </li>
+        <li>
+          <span style="padding-left: 6px; padding-right: 6px;"></span>
+        </li>
+        <li>
+          <a href="/dev/home/" class="btn btn-info">
+            <span style="font-size:18px;">developer <i class="fa fa-github-alt"></span></i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>

@@ -21,14 +21,14 @@ import Register_Developer
 from . import views
 admin.autodiscover()
 
-urlpatterns = patterns('',
-
-    (r'^$',views.home_page),
-    (r'^start/$',views.get_started),
+urlpatterns = patterns(
+    '',
+    (r'^$', views.home_page),
+    (r'^start/$', views.get_started),
     ('', include('social.apps.django_app.urls', namespace='social')),
-    (r'^dev/',include('DevBoxLogin.urls')),
+    (r'^dev/', include('DevBoxLogin.urls')),
     (r'^dev/profile/', include('Register_Developer.urls')),
     (r'^emp/', include('Register_Employer.urls')),
     (r'^admin/', include(admin.site.urls)),
 
-) + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

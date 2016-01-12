@@ -1,4 +1,6 @@
+from django.forms import ModelForm
 from django.db import models
+from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from shared_files.DevBoxUser import DevBoxUser, DevBoxCreatedAt
 
@@ -21,6 +23,7 @@ class Developer(DevBoxUser):
     languages = models.CharField(verbose_name="Programming Languages",
                                  max_length=1000, blank=True)
     is_developer = models.BooleanField(default=False)
+    user = models.OneToOneField(User, unique=True)
 
     def __str__(self):
         return "{}'{} {}".format(self.first_name, 's', 'Details')

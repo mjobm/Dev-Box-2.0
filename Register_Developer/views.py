@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, RequestContext
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm, PortfolioForm
 from .models import Developer, Portfolio
+from Register_Employer.models import Employer
 from shared_files.DevBoxUser import get_object_or_none
 # from azure.blob.storage import BlobService
 # from Register_Developer.blob_data import *
@@ -12,13 +13,13 @@ from shared_files.DevBoxUser import get_object_or_none
 
 @login_required(login_url='/dev/')
 def profile(request):
-    developer = Developer.objects.filter(id=request.user.id)
-    portfolio = Portfolio.objects.filter(owner_id=request.user.id)
-    context = RequestContext(request, {'developer': developer,
-                             'portfolio': portfolio})
-    print(developer, portfolio)
-    return render(request, 'profile.html', context=context)
-
+    if not get_object_or_none(Employer, id=request.user.id):
+        portfolio = Portfolio.objects.filter(owner_id=request.user.id)
+        context = {'portfolio': portfolio,
+                   'developer': request_user(request)}
+        print(request_user(request).user_name)
+        return render(request, 'profile.html', context=context)
+    return redirect('/logout/', '/emp/home/')
 
 # this line edits the current user by pre loading their details
 # from github i.e names and email
@@ -27,14 +28,16 @@ def edit_profile(request):
     developer_profile = get_object_or_none(Developer, pk=request.user.pk)
     profile_form = ProfileForm(instance=developer_profile)
     return render(request, 'register.html',
-                  context={'profile_form': profile_form})
+                  context={'profile_form': profile_form,
+                           'developer': request_user(request)})
 
 
 @login_required(login_url='/dev/')
 def new_portfolio(request):
     portfolio_form = PortfolioForm
     return render(request, 'register_portfolio.html',
-                  context={'portfolio_form': portfolio_form})
+                  context={'portfolio_form': portfolio_form,
+                           'developer': request_user(request)})
 
 # this is where we create the user
 
@@ -71,6 +74,10 @@ def create_portfolio(request):
                                      'portfolio', developer: 'developer'})
     return render(request, 'register_portfolio.html',
                   context={'portfolio_form': portfolio_form})
+
+
+def request_user(request):
+    return get_object_or_none(Developer, pk=request.user.pk)
 
 # uploading portfolios to azure
 # def upload_portfolio_image(path):

@@ -1,69 +1,35 @@
 {% extends 'Layout.html' %}
 {% load static from staticfiles %}
 {% block content %}
-<br>
-<br>
-<br>
-<br>
-<hr>
-<div class="container-fluid">
-  <div class="row">
-  <div class="col-md-12 col-sm-12">
-    {% for item in developer %}
-    <div class="row col-md-8 col-sm-8">
-      <div class="container">
-        <img src="{% static 'img/devbox-logo.png' %}">
-        <br>
-        <br>
-        <h3>{{ item.first_name}} {{item.last_name}}</h3>
-        <h3>{{ item.software_title }} Engineer</h3>
-      </div>
+<div class="container out">
+  <div class="card-shad">
+    <br>
+    <div class="center">
+      <h3>{{developer.first_name}} {{developer.last_name}}</h3>
+      <br>
+      <img class="img-circle" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF_erFD1SeUnxEpvFjzBCCDxLvf-wlh9ZuPMqi02qGnyyBtPWdE-3KoH3s" alt="Ash" />
+      <br>
+      <h2>{{ developer.software_title }} Engineer</h2>
+      <br>
     </div>
-    <div class="col-md-8 col-sm-8">
-      <p>
-        {% if item.bio %}
-          {{item.bio}}
-        {% else %}
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <h2 style="text-align: center;">ABOUT ME</h2>
+    <hr>
+    <div class="bio">
+      {% if item.bio %}
+        {{developer.bio}}
+      {% else %}
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        {% endif %}
-      </p>
+        </h3>
     </div>
-    {% endfor %}
-
-
-
-      {% if portfolio %}
-      <div class="row profiles">
-
-        {% for data in portfolio %}
-
-        <div class="large-4 medium-4 small-4 columns">
-          <h3>Portfolios</h3>
-          <div class="card-css">
-            <div class="project-title">
-              <h5>{{ data.title }}</h5>
-            </div>
-            <div class="project-image">
-              <img src="/media/{{ data.image }}" alt="{{ data.image }}">
-            </div>
-            <div class="project-description">
-              <p>{{ data.description }}</p>
-            </div>
-          </div>
-        </div>
-
-        {% endfor %}
-
-      </div>
-      {% endif %}
-
-    </div>
+    {% endif %}
+    <hr>
+    <br>
   </div>
-  <br>
-  <br>
+
 </div>
-<hr>
 {% endblock %}

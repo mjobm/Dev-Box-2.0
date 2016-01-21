@@ -1,100 +1,87 @@
 {% extends 'Layout.html' %}
 
 {% block content %}
-<!--TESTING IMAGE PROBABLY WILL BE -->
-
-      <section class="post">
-          <div class="row">
-              <div class="large-5 medium-5 small-5 columns">
-                  <ul>
-                      <li><a href="#" class="btn postjob">Post Job</a></li>
-                  </ul>
-              </div>
+  <div class="container out">
+    <header>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <a class="btn btn-default btn-lg" href="/emp/job/">Post a job</a>
+        </div>
+        <div class="col-sm-12 col-md-4">
+        </div>
+        <div class="col-sm-12 col-md-4">
+        </div>
+      </div>
+    </header>
+    <br>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div class="card-shad">
+          <br>
+          <div class="center">
+            <h3>{{emp.first_name}} {{ emp.last_name}}</h3>
+            <br>
+            <img class="img-circle" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF_erFD1SeUnxEpvFjzBCCDxLvf-wlh9ZuPMqi02qGnyyBtPWdE-3KoH3s" alt="Ash" />
+            <br>
+            <h2>{{ emp.company_name}}</h2>
+            <br>
           </div>
-      </section>
-    <!--TESTING EQUILIZER-->
-    <div class="row" >
-        <div class="large-12 columns">
-            <div class="large-6 medium-6 small-6 columns port">
-              <div class="img">
-                <img src="img/stick%20man161-64.png"/>
-                </div>
-                <div class="details">
-                  <ul>
-                      <li>Bill Chabari</li>
-                      <li>Front end Developer</li>
-                      <li>Nairobi, Galana Plaza</li>
-                  </ul>
-                    <div class="bio">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud </p>
-                    </div>
 
-
-                </div>
-                <a href="#" class="btn view">View Portfolio</a>
-            </div>
-
-
-            <div class="large-6 medium-6 small-6 columns port">
-              <div class="img">
-                <img src="img/stick%20man161-64.png"/>
-                </div>
-                <div class="details">
-                  <ul>
-                      <li>Bill Chabari</li>
-                      <li>Backend Developer</li>
-                      <li>Nairobi, Galana Plaza</li>
-                  </ul>
-                    <div class="bio">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud </p>
-                    </div>
-
-                </div>
-                  <a href="#" class="btn view">View Portfolio</a>
-            </div>
+          <br>
         </div>
-        <div class="large-12 columns">
-            <div class="large-6 medium-6 small-6 columns port">
-              <div class="img">
-                <img src="img/stick%20man161-64.png"/>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <ul class="list-group">
+        {% for job in jobs %}
+          <li class="list-group-item">
+
+            <h3 class="list-group-item-heading">
+              <header>
+                <div class="row">
+
+                  <div class="col-sm-8 col-md-4">
+                    <a href="#" class="btn btn-default">
+                      <span class="fa fa-pencil" style="font-size: 32px;"></span>
+                    </a>
+                  </div>
+
+                  <div class="col-sm-8 col-md-4">
+                    <a href="#" class="btn btn-danger">
+                      <span class="fa fa-trash" style="font-size: 32px;"></span>
+                    </a>
+                  </div>
+
+                  <div class="col-sm-8 col-sm-4">
+
+                  </div>
+
                 </div>
-                <div class="details">
-                  <ul>
-                      <li>Bill Chabari</li>
-                      <li>Front end Developer</li>
-                      <li>Nairobi, Galana Plaza</li>
-                  </ul>
-                    <div class="bio">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud </p>
-                    </div>
-
-
-
-                </div>
-                 <a href="#" class="btn view">View Portfolio</a>
+              </header>
+              <hr>
+               {{job.title}}
+             </h3>
+            <hr>
+            <p class="list-group-item-text">
+              {{job.description}}
+            </p>
+            <hr>
+            <div class="container-fluid">
+              <h3><span class="fa fa-map-marker"> {{job.location}}</span></h3>
+              <hr>
+              {% for skill in skills %}
+                <span class="badge"><h5>{{skill}} </h5></span>
+              {% endfor %}
             </div>
-
-
-            <div class="large-6 medium-6 small-6 columns port">
-              <div class="img">
-                <img src="img/stick%20man161-64.png"/>
-                </div>
-                <div class="details">
-                  <ul>
-                      <li>Bill Chabari</li>
-                      <li>Backend Developer</li>
-                      <li>Nairobi, Galana Plaza</li>
-                  </ul>
-                    <div class="bio">
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud </p>
-                    </div>
-
-
-
-                </div>
-                <a href="#" class="btn view">View Portfolio</a>
-            </div>
-        </div>
+            <br>
+            <a style="margin-left: 12px;" class="btn btn-success btn-lg" href="#">Apply</a>
+          </li>
+          <br>
+        {% endfor %}
+        <br>
+        </ul>
+      </div>
     </div>
+
+  </div>
 
 {% endblock %}

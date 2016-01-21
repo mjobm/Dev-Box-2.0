@@ -35,6 +35,8 @@ SOCIAL_AUTH_LOGIN_URL = '/dev/home/'
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/dev/home/'
 
+LOGIN_REDIRECT_URL = '/emp/home/'
+
 ACCOUNT_ACTIVATION_DAYS = 7
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -62,6 +64,7 @@ INSTALLED_APPS = (
     'Register_Developer',
     'Register_Employer',
     'social.apps.django_app.default',
+    'registration',
     'crispy_forms',
     'allauth',
     'allauth.account',
@@ -193,3 +196,7 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/media/'
+
+# Django registration redux settings
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True

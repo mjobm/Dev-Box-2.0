@@ -1682,3 +1682,7 @@ a:focus, a:active {
     color: white;
     background-color: gray;
 }
+.space{
+  margin-top: 8%;
+  margin-bottom: 2%;
+}

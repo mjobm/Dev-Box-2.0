@@ -17,7 +17,7 @@ class JobPost(DevBoxCreatedAt):
     description = models.TextField(blank=False)
     skills_required = models.CharField(max_length=50, blank=False)
     location = models.CharField(max_length=50, blank=False)
-    employer = models.ForeignKey(Employer)
+    owner = models.ForeignKey(Employer)
 
 
 class Application(DevBoxCreatedAt):

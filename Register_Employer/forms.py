@@ -19,7 +19,7 @@ class EmployerForm(ModelForm):
         self.helper = FormHelper()
         self.helper.form_action = '/emp/create/'
         self.helper.form_method = 'POST'
-        
+
         self.helper.layout = Layout(
 
             Field('user_name', placeholder="enter your username here"),
@@ -42,25 +42,23 @@ class JobForm(ModelForm):
 
     class Meta:
         model = JobPost
-        exclude = ('date_created', 'date_updated', 'employer')
+        exclude = ('date_created', 'date_updated', 'owner')
 
     def __init__(self, *args, **kwargs):
         super(JobForm, self).__init__(*args, **kwargs)
         # Init layout form with crispy
         self.helper = FormHelper()
-        # self.helper.attrs = {'data_abide': ''}
-        self.helper.form_action = '/emp/job/create/'
+        self.helper.form_action = '/emp/job/post/'
         self.helper.form_method = 'POST'
-        self.helper.form_show_labels = True
+
         self.helper.layout = Layout(
             Field('title', placeholder="title of the job"),
             Field('description', placeholder="the scope of the job"),
             Field('skills_required',
-                  placeholder=
-                  "programming knowledge separated by commas,e.g HTML,CSS,JS"),
+                  placeholder="programming knowledge separated by commas,e.g HTML,CSS,JS"),
             Field('location', placeholder="where the job is at"),
             FormActions(
-                Submit('submit', _('Register'),
+                Submit('submit', _('Post'),
                        css_class='btn btn-primary btn-lg'),
                 Reset('reset', _('Reset'), css_class='btn btn-danger btn-lg')
             ),

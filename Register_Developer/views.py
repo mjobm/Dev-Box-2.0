@@ -21,6 +21,7 @@ def profile(request):
         return render(request, 'profile.html', context=context)
     return redirect('/logout/', '/emp/home/')
 
+
 # this line edits the current user by pre loading their details
 # from github i.e names and email
 @login_required(login_url='/dev/')
@@ -66,12 +67,11 @@ def create_portfolio(request):
             portfolio.save()
             # upload_portfolio_image()
             portfolio_form.save_m2m()
-            portfolio = Portfolio.objects.get(owner_id=request.user.id)
-            developer = Developer.objects.get(id=request.user.id)
-            print(developer.first_name)
-            return redirect('/dev/profile/me/',
-                            context={portfolio:
-                                     'portfolio', developer: 'developer'})
+            # portfolio = Portfolio.objects.get(owner_id=request.user.id)
+            # developer = Developer.objects.get(id=request.user.id)
+            # print(developer.first_name)
+            # context = {portfolio: 'portfolio', developer: 'developer'}
+            return redirect('/dev/profile/me/')
     return render(request, 'register_portfolio.html',
                   context={'portfolio_form': portfolio_form})
 

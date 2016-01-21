@@ -6,8 +6,9 @@ from Register_Employer import views
 admin.autodiscover()
 urlpatterns = [
     url(r'accounts/', include('allauth.urls')),
-    url(r'home/$',views.emp_home),
-    url(r'create/$',views.register_employer),
-    url(r'job/$',views.show_job_form),
-    url(r'job/create/$',views.post_job),
+    url(r'auth/', include('registration.backends.default.urls')),
+    url(r'home/$', views.emp_home),
+    url(r'create/$', views.register_employer),
+    url(r'job/$', views.show_job_form),
+    url(r'job/post/$', views.post_job),
 ]

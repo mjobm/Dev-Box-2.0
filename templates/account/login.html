@@ -6,37 +6,31 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+<div class="container">
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    <h1>{% trans "Sign In" %}</h1>
+    {% get_providers as socialaccount_providers %}
 
-        <div class="container-fluid wrapper">
+    {% if socialaccount_providers %}
+        <p>
+          {% blocktrans with site.name as site_name %}Please sign in with one
+             of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+             for a {{ site_name }} account and sign in below:{% endblocktrans %}
+        </p>
+    {% else %}
 
+    <h4>{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+    </h4>
+    {% endif %}
 
-          <form class="login" method="POST" action="{% url 'account_login' %}">
-            <h1>{% trans "Sign In" %}</h1>
-            {% get_providers as socialaccount_providers %}
+      {% csrf_token %}
+      {{ form.as_p }}
 
-            {% if socialaccount_providers %}
-                <p>
-                  {% blocktrans with site.name as site_name %}Please sign in with one
-                     of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-                     for a {{ site_name }} account and sign in below:{% endblocktrans %}
-                </p>
-            {% else %}
+      <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  </form>
+  </div>
+</div>
 
-            <h4>{% blocktrans %}If you have not created an account yet, then please
-              <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
-            </h4>
-            {% endif %}
-
-              {% csrf_token %}
-              {{ form.as_p }}
-
-              <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-          </form>
-        </div>
-
-      </div>
-    </div>
     <br>
 {% endblock %}

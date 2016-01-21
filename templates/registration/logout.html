@@ -1,0 +1,9 @@
+{% extends "Layout.html" %}
+{% load i18n
+{% block content %}
+<div class="container-fluid space">
+  <p class='text-align-center lead'>You have successfully logged out.</p>
+  <p class='text-align-center lead'><a href="{% url 'auth_login' %}">Login</a></p>
+  </p>
+</div>
+{% endblock %}

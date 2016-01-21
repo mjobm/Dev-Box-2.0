@@ -1,7 +1,7 @@
 from django.shortcuts import (render, RequestContext,
                               redirect, get_object_or_404)
 from django.contrib.auth.decorators import login_required
-from Register_Employer.models import Employer
+from Register_Employer.models import Employer, JobPost
 from Register_Employer.forms import EmployerForm, JobForm
 from Register_Developer.models import Developer
 from shared_files.DevBoxUser import get_object_or_none
@@ -20,7 +20,12 @@ def emp_home(request):
                           context={'user': request.user,
                                    'employer_form': employer_form})
         employer = get_object_or_none(Employer, id=request.user.id)
-        context = {'user': request.user, 'employer': employer.user}
+        job = JobPost.objects.filter(owner_id=request.user.id)
+        skills = []
+        for item in job:
+            skills = [skill for skill in item.skills_required.split(',')]
+        context = {'user': request.user, 'employer': employer.user,
+                   'emp': employer, 'jobs': job, 'skills': skills}
         return render(request, 'emp_home.html', context=context)
     return redirect('/dev/logout', '/emp/accounts/login/')
 
@@ -61,6 +66,14 @@ def post_job(request):
     job_form = JobForm(request.POST or None)
     if request.method == 'POST':
         if job_form.is_valid():
-            job_form.save()
-            redirect('/emp/home/')
+            job_post = job_form.save(commit=False)
+            job_post.owner_id = request.user.id
+            job_post.save()
+            job_form.save_m2m()
+            # employer = get_object_or_none(Employer, id=request.user.id)
+            # job = JobPost.objects.filter(owner_id=request.user.id)
+            # context = {'user': request.user, 'employer': employer.user,
+            #            'emp': employer, 'jobs': job}
+            # print(job.title)
+            return redirect('/emp/home/')
     return render(request, 'post_job.html', context={'job_form': job_form})

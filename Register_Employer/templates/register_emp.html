@@ -2,11 +2,10 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <br>
-  <br>
-  <br>
-  <br>
-  {% csrf_token %}
-  {% crispy employer_form %}
-  <br>
+
+  <div class="container space">
+    {% csrf_token %}
+    {% crispy employer_form %}
+  </div>
+
 {% endblock %}
